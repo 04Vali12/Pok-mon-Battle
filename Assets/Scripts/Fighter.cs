@@ -14,5 +14,11 @@ public class Fighter : MonoBehaviour
     [SerializeField]
 
     private Attacks _attacks;
-    
+
+    [SerializeField]   
+    public Health Health => _health;
+
+    public Attacks Attacks => _attacks;
+
+    public Animator CharacterAnimator => _characterAnimator;
 }

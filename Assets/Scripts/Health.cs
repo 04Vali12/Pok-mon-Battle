@@ -24,6 +24,8 @@ public class Health : MonoBehaviour
     private UnityEvent _onTakeDamage;
     private float _currentHealth;
 
+    public float CurrentHealth => _currentHealth;
+
     public void InitializeHealth()
     {
         _currentHealth = _initialHealth;

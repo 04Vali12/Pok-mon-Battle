@@ -2257,6 +2257,7 @@ MonoBehaviour:
   _health: {fileID: 625741592}
   _characterAnimator: {fileID: 625741591}
   _attacks: {fileID: 11400000, guid: 75b0126cef870cc469b08152f6f177cb, type: 2}
+  _isActive: 0
 --- !u!1 &963188724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,14 +2858,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Garchomp
+  mTrackableName: Katress
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1.3947369
+  mAspectRatio: 1.4010507
   mImageTargetType: 3
-  mWidth: 0.14339623
+  mWidth: 0.14275001
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 54d9cbf45eff64543a4d9a8cf55b22d7, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 0bc3192cb6729dc43841497e9299da8f, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -2899,7 +2900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1403739225}
   mHiddenRoot: {fileID: 0}
-  mTargetName: Garchomp
+  mTargetName: Katress
   mDatasetName: 
   mCastedBehaviour: {fileID: 1403739225}
   mMeshFilter: {fileID: 0}
@@ -3366,6 +3367,7 @@ MonoBehaviour:
   _health: {fileID: 1882932268}
   _characterAnimator: {fileID: 1882932267}
   _attacks: {fileID: 11400000, guid: 94a7966046b78d64fa0585143e3017ed, type: 2}
+  _isActive: 0
 --- !u!1001 &1889038864
 PrefabInstance:
   m_ObjectHideFlags: 0
