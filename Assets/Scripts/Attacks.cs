@@ -30,4 +30,6 @@ public class Attack
     public string animationName;
 
     public GameObject particlesPrefab;
+
+    public string soundName;
 }

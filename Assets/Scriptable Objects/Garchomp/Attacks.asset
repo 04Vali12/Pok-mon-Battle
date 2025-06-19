@@ -16,12 +16,12 @@ MonoBehaviour:
   - minDamage: 10
     maxDamage: 60
     attackTime: 0.3
-    animationName: Take 001
+    animationName: Attack
     particlesPrefab: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7,
       type: 3}
   - minDamage: 10
     maxDamage: 100
     attackTime: 1
-    animationName: Take 001
+    animationName: Attack
     particlesPrefab: {fileID: 2353600328335836179, guid: ceec7516237b4104b94300043ca39784,
       type: 3}
