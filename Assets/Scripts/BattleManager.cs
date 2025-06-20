@@ -24,6 +24,8 @@ public class BattleManager : MonoBehaviour
 
     private Coroutine _battleCoroutine;
 
+    private DamageTarget _damageTarget = new DamageTarget();
+
     public void AddFighter(Fighter fighter)
     {
         _fighters.Add(fighter);
@@ -74,8 +76,11 @@ public class BattleManager : MonoBehaviour
             defender.transform.LookAt(attacker.transform);
             Attack attack = attacker.Attacks.GetRandomAttack();
             SoundManager.instance.Play(attack.soundName);
+            attacker.CharacterAnimator.Play(attack.animationName);
             yield return new WaitForSeconds(attack.attackTime);
-            defender.Health.TakeDamage(Random.Range(attack.minDamage, attack.maxDamage));
+            float damage = Random.Range(attack.minDamage, attack.maxDamage);
+            _damageTarget.SetDamageTarget(damage, defender.transform);
+            defender.Health.TakeDamage(_damageTarget);
             if (defender.Health.CurrentHealth <= 0)
             {
                 _fighters.Remove(defender);
