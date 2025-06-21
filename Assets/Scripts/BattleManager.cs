@@ -77,8 +77,12 @@ public class BattleManager : MonoBehaviour
             Attack attack = attacker.Attacks.GetRandomAttack();
             SoundManager.instance.Play(attack.soundName);
             attacker.CharacterAnimator.Play(attack.animationName);
+            GameObject attackParticles = Instantiate(attack.particlesPrefab, attacker.transform.position, Quaternion.identity); //nota
+            attackParticles.transform.SetParent(attacker.transform);
             yield return new WaitForSeconds(attack.attackTime);
             float damage = Random.Range(attack.minDamage, attack.maxDamage);
+             GameObject defendParticles =Instantiate(attack.hitParticlesPrefab, defender.transform.position, Quaternion.identity); //nota
+            defendParticles.transform.SetParent(defender.transform);
             _damageTarget.SetDamageTarget(damage, defender.transform);
             defender.Health.TakeDamage(_damageTarget);
             if (defender.Health.CurrentHealth <= 0)
