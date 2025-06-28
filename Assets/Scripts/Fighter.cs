@@ -1,8 +1,13 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Fighter : MonoBehaviour
 {
+    [SerializeField]
+    private string _name;
+
+    public string Name => _name;
 
     [SerializeField]
 
@@ -24,6 +29,15 @@ public class Fighter : MonoBehaviour
     [SerializeField]
 
     private UnityEvent _onFighterInitialized;
+
+    [SerializeField]
+    private string _winAnimationName = "Win";
+
+    [SerializeField]
+    private string _winSoundName  = "WinSound";
+
+    public string WinSoundName => _winSoundName;
+    public string WinAnimationName => _winAnimationName;
 
     public Animator CharacterAnimator => _characterAnimator;
 
