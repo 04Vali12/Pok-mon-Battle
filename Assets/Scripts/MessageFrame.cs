@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,16 +11,18 @@ public class MessageFrame : MonoBehaviour
     private Animator _animator;
 
     [SerializeField]
-    private float _timeBetweenLetters = 0.5f;
+    private float _timeBetweenLettters = 0.05f;
 
     [SerializeField]
     private float _timeToHide = 2f;
 
     [SerializeField]
-    private String _showAnimationName = "ShowMessageText";
+    private string _showAnimationName = "ShowMessageFrame";
+
     [SerializeField]
-    private String _hideAnimationName = "HideMessageText";
-    private String _currentText;
+    private string _hideAnimationname = "HideMesaggeFrame";
+
+    private string _curretText;
 
     private Coroutine _typingCoroutine;
 
@@ -43,20 +43,21 @@ public class MessageFrame : MonoBehaviour
     public void ShowMessage(string message)
     {
         StopCoroutine();
-        _currentText = message;
+        _curretText = message;
         _text.text = "";
         _animator.Play(_showAnimationName, 0, 0f);
+        _typingCoroutine = StartCoroutine(TypeMessage());
     }
 
     private IEnumerator TypeMessage()
     {
-        for (int i = 0; i < _currentText.Length; i++)
+        for (int i = 0; i < _curretText.Length; i++)
         {
-            _text.text += _currentText[i];
-            yield return new WaitForSeconds(_timeBetweenLetters);
+            _text.text += _curretText[i];
+            yield return new WaitForSeconds(_timeBetweenLettters);
         }
         yield return new WaitForSeconds(_timeToHide);
-        _animator.Play(_hideAnimationName, 0, 0f);
+        _animator.Play(_hideAnimationname, 0, 0f);
     }
 
     private void StopCoroutine()
@@ -68,10 +69,10 @@ public class MessageFrame : MonoBehaviour
         }
     }
 
-    public void StopMessage()
+    public void StopMesage()
     {
         StopCoroutine();
-        _animator.Play(_hideAnimationName, 0, 0f);
+        _animator.Play(_hideAnimationname, 0, 0f);
         _text.text = "";
     }
 }

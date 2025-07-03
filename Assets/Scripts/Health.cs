@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using Unity.VisualScripting;
+
 public class Health : MonoBehaviour
 {
     [SerializeField]
@@ -17,36 +17,32 @@ public class Health : MonoBehaviour
     private UnityEvent _onDefeated;
 
     [SerializeField]
-
     private UnityEvent<DamageTarget> _onTakeDamage;
 
-    private float _currentHealth;
+    private float _currentHeath;
 
-    public float CurrentHealth => _currentHealth;
+    public float CurrentHealth => _currentHeath;
 
-    public void InitializeHealth()
+    public void InitialHealth()
     {
-        _currentHealth = _initialHealth;
+        _currentHeath = _initialHealth;
         UpdateHealth();
-
     }
 
     private void UpdateHealth()
     {
-        _onUpdateHealth?.Invoke(_currentHealth / _initialHealth);
-
+        _onUpdateHealth?.Invoke(_currentHeath / _initialHealth);
     }
 
     public void TakeDamage(DamageTarget damageTarget)
     {
-        _currentHealth -= damageTarget.damage;
+        _currentHeath -= damageTarget.damage;
         _onTakeDamage?.Invoke(damageTarget);
-        if (_currentHealth < 0)
+        if (_currentHeath < 0)
         {
             _onDefeated?.Invoke();
-            _currentHealth = 0;
+            _currentHeath = 0;
         }
-        
         UpdateHealth();
     }
 }

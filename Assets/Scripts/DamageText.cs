@@ -4,15 +4,12 @@ using UnityEngine.UI;
 public class DamageText : MonoBehaviour
 {
     [SerializeField]
-
     private Animator _animator;
 
     [SerializeField]
-
     private Text _text;
 
     [SerializeField]
-
     private string _showAnimationName = "ShowDamageText";
 
     public void ShowDamageText(DamageTarget damageTarget)
@@ -23,16 +20,14 @@ public class DamageText : MonoBehaviour
     }
 }
 
-[System.Serializable]
+    [System.Serializable]
     public class DamageTarget
     {
         public float damage;
-
         public Transform target;
         public void SetDamageTarget(float damage, Transform target)
         {
             this.damage = damage;
             this.target = target;
         }
-        
     }

@@ -600,18 +600,6 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1329123523}
-        m_TargetAssemblyTypeName: InstantiateObject, Assembly-CSharp
-        m_MethodName: Instantiate
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1882932266}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 963188726}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: Play
@@ -624,25 +612,13 @@ MonoBehaviour:
           m_StringArgument: Ho-oh cries
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1812556449}
-        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
-        m_MethodName: AddFighter
-        m_Mode: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1882932269}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1812556449}
-        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
-        m_MethodName: AddFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1882932269}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -651,13 +627,13 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1812556449}
-        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
-        m_MethodName: RemoveFighter
-        m_Mode: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1882932269}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -812,7 +788,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2332,33 +2308,9 @@ MonoBehaviour:
   _health: {fileID: 625741592}
   _characterAnimator: {fileID: 625741591}
   _attacks: {fileID: 11400000, guid: 75b0126cef870cc469b08152f6f177cb, type: 2}
-  _onFighterInitialized:
+  _onFighterInitializad:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 625741592}
-        m_TargetAssemblyTypeName: Health, Assembly-CSharp
-        m_MethodName: InitializeHealth
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 625741591}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Idle
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _winAnimationName: Win
   _winSoundName: WinSound
 --- !u!1 &653321913
@@ -2474,16 +2426,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 653321915}
   _image: {fileID: 653321916}
-  _animationName: TimerShowSeconds
   _timerDataList:
-  - sprite: {fileID: 21300000, guid: ebdd64af75cd3c14199f66baf24725c7, type: 3}
-    soundName: 3
-  - sprite: {fileID: 21300000, guid: 9ff71052e19295c4db230d1e2a7d20ec, type: 3}
-    soundName: 2
   - sprite: {fileID: 21300000, guid: f6835a7b0756a3741ad0815bc13d5d19, type: 3}
     soundName: 1
+  - sprite: {fileID: 21300000, guid: 9ff71052e19295c4db230d1e2a7d20ec, type: 3}
+    soundName: 2
+  - sprite: {fileID: 21300000, guid: ebdd64af75cd3c14199f66baf24725c7, type: 3}
+    soundName: 3
   - sprite: {fileID: 21300000, guid: 0359415d4265f724a9bcdcc9590f45bf, type: 3}
     soundName: GOOOO!
+  _animationName: TimerShowSeconds
   _onTimerEnd:
     m_PersistentCalls:
       m_Calls:
@@ -2496,7 +2448,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Numb
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 963188726}
@@ -3127,10 +3079,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _text: {fileID: 945924250}
   _animator: {fileID: 1195410588}
-  _timeBetweenLetters: 0.5
+  _timeBetweenLettters: 0.05
   _timeToHide: 2
   _showAnimationName: ShowMessageText
-  _hideAnimationName: HideMessageText
+  _hideAnimationname: HideMesaggeFrame
 --- !u!95 &1195410588
 Animator:
   serializedVersion: 7
@@ -3447,18 +3399,6 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1329123523}
-        m_TargetAssemblyTypeName: InstantiateObject, Assembly-CSharp
-        m_MethodName: Instantiate
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 625741590}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 963188726}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: Play
@@ -3471,25 +3411,13 @@ MonoBehaviour:
           m_StringArgument: GarchompCries
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1812556449}
-        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
-        m_MethodName: AddFighter
-        m_Mode: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 625741593}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1812556449}
-        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
-        m_MethodName: AddFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 625741593}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3498,13 +3426,13 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1812556449}
-        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
-        m_MethodName: RemoveFighter
-        m_Mode: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 625741593}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3659,7 +3587,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3902,7 +3830,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1195410587}
         m_TargetAssemblyTypeName: MessageFrame, Assembly-CSharp
-        m_MethodName: StopMessage
+        m_MethodName: StopMesage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3912,9 +3840,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _onFightersReady:
-    m_PersistentCalls:
-      m_Calls: []
   _onBattleStarted:
     m_PersistentCalls:
       m_Calls:
@@ -3942,7 +3867,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: WinnSound
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 963188726}
@@ -4270,33 +4195,9 @@ MonoBehaviour:
   _health: {fileID: 1882932268}
   _characterAnimator: {fileID: 1882932267}
   _attacks: {fileID: 11400000, guid: 94a7966046b78d64fa0585143e3017ed, type: 2}
-  _onFighterInitialized:
+  _onFighterInitializad:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1882932268}
-        m_TargetAssemblyTypeName: Health, Assembly-CSharp
-        m_MethodName: InitializeHealth
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1882932267}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Track-001
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _winAnimationName: Win
   _winSoundName: WinSound
 --- !u!1001 &1889038864

@@ -1,21 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.Events;
+using System.Collections;
+using NUnit.Framework;
 
 public class BattleManager : MonoBehaviour
 {
     [SerializeField]
 
     private int _numberOfFighters = 2;
+
     [SerializeField]
 
     private UnityEvent _onBattleStopped;
-
-    [SerializeField]
-
-    private UnityEvent _onFightersReady;
 
     [SerializeField]
 
@@ -27,12 +24,11 @@ public class BattleManager : MonoBehaviour
     private List<Fighter> _fighters = new List<Fighter>();
 
     private Coroutine _battleCoroutine;
-
-    private DamageTarget _damageTarget = new DamageTarget();
+    private DamageTarget _damagetTarget = new DamageTarget();
 
     public void AddFighter(Fighter fighter)
     {
-        MessageFrame.Instance.ShowMessage($"{fighter.Name} Has join the battle!");
+        MessageFrame.Instance.ShowMessage($"{fighter.Name} Has joined the battle!");
         _fighters.Add(fighter);
         CheckFighters();
     }
@@ -57,7 +53,7 @@ public class BattleManager : MonoBehaviour
         {
             return;
         }
-        _onBattleStarted?.Invoke();
+        _onBattleStarted.Invoke();
     }
 
     public void StartBattle()
@@ -82,33 +78,32 @@ public class BattleManager : MonoBehaviour
             attacker.transform.LookAt(defender.transform);
             defender.transform.LookAt(attacker.transform);
             Attack attack = attacker.Attacks.GetRandomAttack();
-            MessageFrame.Instance.ShowMessage($"{attacker.Name} attacks with{attack.attackName}");
+            MessageFrame.Instance.ShowMessage($"{attacker.Name} attacks with {attack.attackName}!");
             SoundManager.instance.Play(attack.soundName);
             attacker.CharacterAnimator.Play(attack.animationName);
-            GameObject attackParticles = Instantiate(attack.particlesPrefab, attacker.transform.position, Quaternion.identity); //nota
+            GameObject attackParticles = Instantiate(attack.particlesPrefab, attacker.transform.position, Quaternion.identity);
             attackParticles.transform.SetParent(attacker.transform);
             yield return new WaitForSeconds(attack.attackTime);
             float damage = Random.Range(attack.minDamage, attack.maxDamage);
-            GameObject defendParticles = Instantiate(attack.hitParticlesPrefab, defender.transform.position, Quaternion.identity); //nota
+            GameObject defendParticles = Instantiate(attack.hitParticlesPrefab, defender.transform.position, Quaternion.identity);
             defendParticles.transform.SetParent(defender.transform);
-            _damageTarget.SetDamageTarget(damage, defender.transform);
-            defender.Health.TakeDamage(_damageTarget);
+            _damagetTarget.SetDamageTarget(damage, defender.transform);
+            defender.Health.TakeDamage(_damagetTarget);
             if (defender.Health.CurrentHealth <= 0)
             {
                 _fighters.Remove(defender);
-                
             }
             yield return new WaitForSeconds(1f);
         }
         EndBattle(_fighters[0]);
     }
+
     private void EndBattle(Fighter winner)
     {
         winner.transform.LookAt(Camera.main.transform);
         MessageFrame.Instance.ShowMessage($"{winner.Name} wins the battle!");
-        SoundManager.instance.Play(winner.WinSoundName);
+        SoundManager.instance.Play(winner.WindSoundName);
         winner.CharacterAnimator.Play(winner.WinAnimationName);
         _onBattleFinished?.Invoke();
     }
-
 }

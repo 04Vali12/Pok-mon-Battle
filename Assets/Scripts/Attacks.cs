@@ -4,35 +4,27 @@ using UnityEngine;
 public class Attacks : ScriptableObject
 {
     public Attack[] attacks;
-
     public Attack GetRandomAttack()
     {
         if (attacks == null || attacks.Length == 0)
         {
-            Debug.LogWarning("No attacks available");
+            Debug.LogWarning("No attacks available.");
             return null;
         }
         int randomIndex = Random.Range(0, attacks.Length);
         return attacks[randomIndex];
-
     }
 }
-[System.Serializable]
 
+[System.Serializable]
 public class Attack
 {
-    public string attackName;
+    public string attackName; //nota
     public float minDamage;
-
     public float maxDamage;
-
     public float attackTime;
-
     public string animationName;
-
-    public GameObject particlesPrefab;
-
     public string soundName;
-
-    public GameObject hitParticlesPrefab;
+    public GameObject hitParticlesPrefab; //nota
+    public GameObject particlesPrefab;
 }
