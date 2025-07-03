@@ -17,10 +17,10 @@ public class MessageFrame : MonoBehaviour
     private float _timeToHide = 2f;
 
     [SerializeField]
-    private string _showAnimationName = "ShowMessageFrame";
+    private string _showAnimationName = "ShowMessageText";
 
     [SerializeField]
-    private string _hideAnimationname = "HideMesaggeFrame";
+    private string _hideAnimationname = "HideMesaggeText";
 
     private string _curretText;
 
