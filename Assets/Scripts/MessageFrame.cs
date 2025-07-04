@@ -20,7 +20,7 @@ public class MessageFrame : MonoBehaviour
     private string _showAnimationName = "ShowMessageText";
 
     [SerializeField]
-    private string _hideAnimationname = "HideMesaggeText";
+    private string _hideAnimationname = "HideMessageText";
 
     private string _curretText;
 
