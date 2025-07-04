@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: Attacks
   m_EditorClassIdentifier: 
   attacks:
-  - attackName: Garra dragon
-    minDamage: 20
-    maxDamage: 100
-    attackTime: 2
-    animationName: Attack
-    soundName: Bite
-    hitParticlesPrefab: {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d,
+  - attackName: Leaf Guard
+    minDamage: 10
+    maxDamage: 150
+    attackTime: 1
+    animationName: Attack 1
+    soundName: Acid Spray
+    hitParticlesPrefab: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7,
       type: 3}
     particlesPrefab: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7,
       type: 3}
-  - attackName: Excavar
+  - attackName: Slashing Strike
     minDamage: 10
     maxDamage: 100
-    attackTime: 1
-    animationName: Attack
-    soundName: Dragon Tail
-    hitParticlesPrefab: {fileID: 3432958286849152088, guid: 87ee7299dd44ed747af24dbb91bcd33b,
+    attackTime: 2
+    animationName: Attack 2 Leaf
+    soundName: Powder Part 1
+    hitParticlesPrefab: {fileID: 5880797563127281583, guid: 265d3a5ba69981a4698ceabcedf368b0,
       type: 3}
     particlesPrefab: {fileID: 2353600328335836179, guid: ceec7516237b4104b94300043ca39784,
       type: 3}

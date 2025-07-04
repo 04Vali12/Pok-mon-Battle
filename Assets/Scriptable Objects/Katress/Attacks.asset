@@ -18,7 +18,7 @@ MonoBehaviour:
     maxDamage: 150
     attackTime: 1
     animationName: Attack 1
-    soundName: 
+    soundName: Absorb part 1
     hitParticlesPrefab: {fileID: 2353600328335836179, guid: ceec7516237b4104b94300043ca39784,
       type: 3}
     particlesPrefab: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7,
@@ -28,7 +28,7 @@ MonoBehaviour:
     maxDamage: 100
     attackTime: 2
     animationName: Attack 2
-    soundName: 
+    soundName: Fairy Lock
     hitParticlesPrefab: {fileID: 3280519133390621005, guid: a71be3e7990efb040a07565c43cbb198,
       type: 3}
     particlesPrefab: {fileID: 2353600328335836179, guid: ceec7516237b4104b94300043ca39784,
